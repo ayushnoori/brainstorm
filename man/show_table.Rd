@@ -4,16 +4,18 @@
 \alias{show_table}
 \title{Show Markdown table.}
 \usage{
-show_table(table)
+show_table(table, height = "300px")
 }
 \arguments{
 \item{table}{Table to display.}
+
+\item{height}{Optional parameter to set height of scroll box. Default is 300px.}
 }
 \value{
-`kable` table object.
+\code{kable} table object.
 }
 \description{
-Read table in Markdown document. Depends on `knitr` and `kableExtra` packages.
+Read table in Markdown document. Depends on \code{knitr} and \code{kableExtra} packages.
 }
 \author{
 Ayush Noori
