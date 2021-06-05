@@ -1,4 +1,4 @@
-# brainstorm: Personal Utility Functions
+# brainstorm: Personal Utility Functions <img src='man/figures/logo.png' align="right" height="139" />
 
 The `brainstorm` package houses personal utility functions which I reuse in my R scripts. Please note that this package remains under development.
 
