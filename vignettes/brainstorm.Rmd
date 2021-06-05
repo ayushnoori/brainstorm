@@ -1,25 +1,76 @@
 ---
-title: "brainstorm"
+title: "Introduction to brainstorm"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{brainstorm}
+  %\VignetteIndexEntry{Introduction to brainstorm}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
-
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
 ```
 
-This package houses personal utility functions which I reuse in my R scripts.
+
+# About
+
+The `brainstorm` package houses  personal utility functions which I reuse in my R scripts. Please see some examples below.
 
 ```{r setup}
 
 library(brainstorm)
+
+```
+
+
+# Excel Visualization
+
+The `brainstorm` package contains my default settings for efficiently plotting tables in Excel worksheets (using the `openxlsx` package). In the following example, we consider the classic `iris` dataset using the `add_worksheet()` function, which itself depends upon several subfunctions. If the user desires finer control, these subfunctions could be called individually and in succession, and the default values for each of the arguments could thereby be modified.
+
+```{r excel-visualization}
+
+# load package
+library(openxlsx)
+
+# create workbook
+wb = createWorkbook()
+sheet = "Iris Data"
+
+# call function
+add_worksheet(wb, sheet, iris)
+
+# save workbook
+saveWorkbook(wb, "Iris Data.xlsx", overwrite = TRUE)
+
+```
+
+The resulting example file can be downloaded below.
+
+```{r embed-file, echo = FALSE}
+
+xfun::embed_file("Iris Data.xlsx")
+
+```
+
+
+# Markdown Functions
+
+`show_table()` is a utility function to show interactive tables within a markdown document, as shown below.
+
+```{r show-table}
+
+# show table
+show_table(iris, height = "150px")
+
+```
+
+Further, inspired by [this GitHub issue](https://github.com/yixuan/prettydoc/issues/30), the repository for this package contains my custom CSS file for the R Markdown `cayman` theme in [`prettydoc`](https://github.com/yixuan/prettydoc), available for download below.
+
+```{r custom-css, echo = FALSE}
+
+xfun::embed_file("../css/custom.css")
 
 ```

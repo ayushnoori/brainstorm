@@ -10,6 +10,6 @@
 #' @importFrom magrittr "%>%"
 show_table = function(table, height = "300px") {
   knitr::kable(table, row.names = FALSE, align = "c") %>%
-    kableExtra::kable_styling(bootstrap_options = c("striped", "bordered", "hover", "responsive"), font_size=12)  %>%
-    kableExtra::kable_styling(width = "100%", height = height, fixed_thead = list(enabled = T, background = "#159957"), extra_css = "margin-bottom: 1.2em;")
+    kableExtra::kable_styling(bootstrap_options = c("striped", "bordered", "hover", "responsive"), font_size = 12)  %>%
+    kableExtra::scroll_box(width = "100%", height = height, fixed_thead = list(enabled = T, background = "#159957"), extra_css = "margin-bottom: 1.2em;")
 }
