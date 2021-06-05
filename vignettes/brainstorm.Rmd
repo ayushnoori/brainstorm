@@ -1,0 +1,25 @@
+---
+title: "brainstorm"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{brainstorm}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+```
+
+This package houses personal utility functions which I reuse in my R scripts.
+
+```{r setup}
+
+library(brainstorm)
+
+```

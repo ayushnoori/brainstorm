@@ -7,8 +7,9 @@
 #' @return \code{kable} table object.
 #' @author Ayush Noori
 #' @export
+#' @importFrom magrittr "%>%"
 show_table = function(table, height = "300px") {
-  kable(table, row.names = FALSE, align = "c") %>%
-    kable_styling(bootstrap_options = c("striped", "bordered", "hover", "responsive"), font_size=12)  %>%
-    scroll_box(width = "100%", height = height, fixed_thead = list(enabled = T, background = "#159957"), extra_css = "margin-bottom: 1.2em;")
+  knitr::kable(table, row.names = FALSE, align = "c") %>%
+    kableExtra::kable_styling(bootstrap_options = c("striped", "bordered", "hover", "responsive"), font_size=12)  %>%
+    kableExtra::kable_styling(width = "100%", height = height, fixed_thead = list(enabled = T, background = "#159957"), extra_css = "margin-bottom: 1.2em;")
 }
