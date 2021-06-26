@@ -1,7 +1,7 @@
 Package: brainstorm
 Type: Package
 Title: Personal Utility Functions
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: person("Ayush", "Noori", email = "anoori1@mgh.harvard.edu", role = c("aut", "cre"))
 Description: This package houses personal utility functions which I reuse in my R scripts.
 URL: https://www.ayushnoori.com/brainstorm, https://github.com/ayushnoori/brainstorm

@@ -175,7 +175,7 @@ add_worksheet = function(wb, sheet, table,
 
   # set column widths and row heights
   openxlsx::setColWidths(wb, sheet, 1:ncol(table), cw)
-  openxlsx::setRowHeights(wb, sheet, 1:nrow(table), rh)
+  openxlsx::setRowHeights(wb, sheet, 1:(nrow(table) + 1), rh)
 
   # add row styling
   apply_r1(wb, sheet, table, style = row1)
