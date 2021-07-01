@@ -185,3 +185,27 @@ add_worksheet = function(wb, sheet, table,
   if(fc|fr) openxlsx::freezePane(wb, sheet, far, fac, fr, fc)
 
 }
+
+
+#' Write to Excel file.
+#'
+#' Combine \code{brainstorm} functions to write a single data table to an Excel file with a single worksheet. For finer control, functions can be called individually. Depends on the \code{openxlsx} package.
+#' @param table Table to add to worksheet.
+#' @param path Path to save Excel file.
+#' @param overwrite If \code{TRUE}, overwrite any existing file.
+#' @param ... Other arguments to be passed to \code{brainstorm::add_worksheet()}.
+#' @author Ayush Noori
+#' @export
+write_excel = function(table, path, overwrite, ...) {
+
+  # create workbook
+  wb = openxlsx::createWorkbook()
+
+  # add worksheet
+  add_worksheet(wb = wb, table = table, ...)
+
+  # save file
+  openxlsx::saveWorkbook(wb, path, overwrite)
+
+
+}
