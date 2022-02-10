@@ -20,7 +20,7 @@ summarize_model = function(model, label = NULL) {
   # model results
   model_results = my_summary$coefficients %>%
     data.table::as.data.table(keep.rownames = "Comparison") %>%
-    data.table::merge(my_confint, by = "Comparison") %>%
+    data.table::merge.data.table(my_confint, by = "Comparison") %>%
     data.table::setnames(c("2.5 %", "97.5 %"), c("Lower CI", "Upper CI"))
 
   if(!is.null(label)) {
