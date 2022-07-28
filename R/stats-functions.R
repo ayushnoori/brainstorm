@@ -2,7 +2,7 @@
 #'
 #' Compute coefficients and confidence intervals from a fitted model object (e.g., from \code{lme4::lmer} or \code{limma::lmFit}).
 #'
-#' @param model
+#' @param model Fitted model object.
 #' @param label Optional parameter to add a label to the resulting \code{data.table}.
 #' @return \code{data.table} object with coefficients and CIs.
 #' @author Ayush Noori

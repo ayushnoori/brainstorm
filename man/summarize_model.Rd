@@ -7,6 +7,8 @@
 summarize_model(model, label = NULL)
 }
 \arguments{
+\item{model}{Fitted model object.}
+
 \item{label}{Optional parameter to add a label to the resulting \code{data.table}.}
 }
 \value{

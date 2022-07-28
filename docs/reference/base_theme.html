@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Compute model summary. — summarize_model • brainstorm</title>
+<title>Return base theme. — base_theme • brainstorm</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="Compute model summary. — summarize_model" />
-<meta property="og:description" content="Compute coefficients and confidence intervals from a fitted model object (e.g., from lme4::lmer or limma::lmFit)." />
+<meta property="og:title" content="Return base theme. — base_theme" />
+<meta property="og:description" content="Return base theme from the ggplot2 package." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -119,33 +119,21 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Compute model summary.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ayushnoori/brainstorm/blob/master/R/stats-functions.R'><code>R/stats-functions.R</code></a></small>
-    <div class="hidden name"><code>summarize_model.Rd</code></div>
+    <h1>Return base theme.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ayushnoori/brainstorm/blob/master/R/ggplot-functions.R'><code>R/ggplot-functions.R</code></a></small>
+    <div class="hidden name"><code>base_theme.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Compute coefficients and confidence intervals from a fitted model object (e.g., from <code><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lme4::lmer</a></code> or <code><a href='https://rdrr.io/pkg/limma/man/lmFit.html'>limma::lmFit</a></code>).</p>
+    <p>Return base theme from the <code>ggplot2</code> package.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>summarize_model</span><span class='op'>(</span><span class='va'>model</span>, label <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>base_theme</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>model</th>
-      <td><p>Fitted model object.</p></td>
-    </tr>
-    <tr>
-      <th>label</th>
-      <td><p>Optional parameter to add a label to the resulting <code>data.table</code>.</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>data.table</code> object with coefficients and CIs.</p>
+    <p><code>ggplot2</code> theme.</p>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ayush Noori</p>

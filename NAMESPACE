@@ -3,6 +3,7 @@
 export(add_worksheet)
 export(apply_r1)
 export(apply_r2)
+export(base_theme)
 export(h1)
 export(r1)
 export(r2)
