@@ -1,0 +1,76 @@
+---
+title: "Introduction to R"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to R}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+The bread and butter of bioinformatics is R, a programming language and statistical computing environment. This tutorial, written for the [MIND Data Science Lab](https://www.massgeneral.org/neurology/research/mind-data-science-lab) at [Massachusetts General Hospital](https://www.massgeneral.org/), will prepare you to be up and running with R.
+
+## Getting Setup
+
+How to install R:
+
+1.  First, download the latest version of base R (at the time of writing, v4.2.2) at [The Comprehensive R Archive Network](https://cloud.r-project.org/ "https://cloud.r-project.org/"). See the [CRAN FAQs](https://cran.r-project.org/faqs.html "https://cran.r-project.org/faqs.html") for additional information.
+
+2.  Next, install RStudio, an [integrated development environment](https://www.w3schools.in/integrated-development-environment-ide/ "https://www.w3schools.in/integrated-development-environment-ide/") (IDE) for R, at [RStudio](https://www.rstudio.com/products/rstudio/ "https://www.rstudio.com/products/rstudio/") (download the open source edition).
+
+3.  I also recommend that you install VS Code at [Visual Studio Code](https://code.visualstudio.com/ "https://code.visualstudio.com/") and Git at [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git "https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"). VS Code is a general purpose IDE while Git is a software for version control, which you may need to use later.
+
+## Package Installation
+
+Next, let's install some packages (known as libraries in Python, they allow you to import additional functions for more complex analyses). To do so, follow the instructions at [How to Install a Package in R](https://www.geeksforgeeks.org/how-to-install-a-package-in-r/ "https://www.geeksforgeeks.org/how-to-install-a-package-in-r/"), Method #2. Namely, run the following line at the R console in RStudio:
+
+```{r install-packges}
+install.packages(c("data.table", "magrittr", "purrr", "ggplot2", "rmarkdown"))
+```
+
+This will install five important packages (and their dependencies); keep this line handy when you need to install more packages!
+
+In a similar manner, install the latest version of *Bioconductor* (at the time of writing, v3.16) by following the instructions at [Bioconductor - Install](http://www.bioconductor.org/install/ "http://www.bioconductor.org/install/"). The *Bioconductor* project is a repository of R packages for bioinformatics analyses.
+
+## Learning R
+
+Now, time to start learning R. Some introductory resources below:
+
+1.  First, briefly review lectures 0-1 of Harvard\'s CS50 course, publicly available at [CS50](https://cs50.harvard.edu/college/2021/fall/weeks/1/ "https://cs50.harvard.edu/college/2021/fall/weeks/1/"). Don\'t focus on Scratch/C syntax; rather, try to familiarize yourself with the ideas of variables, functions, arguments, conditionals (i.e., `if` and `if-else` statements), and loops. Best to start with the lecture notes and Cmd/Ctrl + F these terms.
+
+2.  [Big Book of R](https://www.bigbookofr.com/index.html "https://www.bigbookofr.com/index.html"): a master resource of approx. 250 books on anything and everything R-related. Bookmark this page!
+
+3.  [R for Data Science](https://r4ds.had.co.nz/explore-intro.html "https://r4ds.had.co.nz/explore-intro.html"): skim chapters 2-8 of this intro to R book (authored by the one-and-only [Hadley Wickham](https://twitter.com/hadleywickham "https://twitter.com/hadleywickham")).
+
+4.  If you prefer a video introduction, check out [Getting Started with R](https://rfortherestofus.com/courses/getting-started/ "https://rfortherestofus.com/courses/getting-started/").
+
+5.  Manipulating tabular data is a key component of data science! Various packages exist to do so in R; our lab is partial to `data.table`. Start with the following vignette: [Introduction to data.table](https://rdatatable.gitlab.io/data.table/articles/datatable-intro.html "https://rdatatable.gitlab.io/data.table/articles/datatable-intro.html").
+
+After mastering R, you might find learning Python fundamentals useful as well. A taste of what\'s to come!
+
+## Tips and Tricks
+
+Other pieces of advice which you may find useful:
+
+1.  When possible, write code in notebooks! This allows you to keep your code and documentation in one place. In R, use [R Markdown Notebooks](https://www.rstudio.com/blog/r-notebooks/ "https://www.rstudio.com/blog/r-notebooks/") (`.Rmd` files); in Python, use [Jupyter Notebooks](https://jupyter.org/ "https://jupyter.org/") (`.ipynb` files). Watch this one minute video: [What is R Markdown?](https://rmarkdown.rstudio.com/lesson-1.html "https://rmarkdown.rstudio.com/lesson-1.html"). An R Markdown cheat sheet is available [here](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf "https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf").
+
+2.  Be sure to frequently [comment your code](https://www.c-sharpcorner.com/blogs/why-comments-are-important-while-writing-a-code "https://www.c-sharpcorner.com/blogs/why-comments-are-important-while-writing-a-code"). You\'ll thank yourself later when you revisit and revise old scripts. In both R and Python, adding `#` at the beginning of a line will transform the line to a comment.
+
+3.  Use `magrittr` pipes for more readable code: [magrittr and wrapr Pipes in R, an Examination \| R-bloggers](https://www.r-bloggers.com/2018/04/magrittr-and-wrapr-pipes-in-r-an-examination/ "https://www.r-bloggers.com/2018/04/magrittr-and-wrapr-pipes-in-r-an-examination/").
+
+4.  The `purrr::map()` functions (i.e., `map` functions in the `purrr` package) are an advanced alternative to `for` loops which support a functional programming style. To learn more, read Ch. 21 of R for Data Science at [21 Iteration \| R for Data Science](https://r4ds.had.co.nz/iteration.html#the-map-functions "https://r4ds.had.co.nz/iteration.html#the-map-functions"), or reference [this Towards Data Science post](https://towardsdatascience.com/functional-programming-in-r-with-purrr-469e597d0229 "https://towardsdatascience.com/functional-programming-in-r-with-purrr-469e597d0229").
+
+5.  Useful [extensions to install](https://code.visualstudio.com/docs/editor/extension-marketplace "https://code.visualstudio.com/docs/editor/extension-marketplace") in VS Code: Python, R, Jupyter, Git Graph, Microsoft Remote Development.
+
+6.  Questions? Try referencing StackOverflow, a Q&A forum for programmers everywhere: [Newest 'r' Questions - Stack Overflow](https://stackoverflow.com/questions/tagged/r "https://stackoverflow.com/questions/tagged/r"). Other domain-specific forums exist as well. The internet is a gold mine of programming resources!
+
+## Questions
+
+Should you have any questions or comments, please don't hesitate to reach out to me at [anoori1@mgh.harvard.edu](mailto:anoori1@mgh.harvard.edu).

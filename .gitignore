@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 inst/doc
+
+# ignore .DS_Store files
+*.DS_Store
