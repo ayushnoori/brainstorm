@@ -4,7 +4,8 @@
 #'
 #' @name brainstorm-package
 #' @aliases brainstorm
-#' @docType package
+#' @keywords internal
+"_PACKAGE"
 #' @author Ayush Noori \email{anoori1@@mgh.harvard.edu}
 #' @references
 #' \url{https://www.ayushnoori.com/brainstorm}

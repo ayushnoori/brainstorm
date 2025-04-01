@@ -22,7 +22,13 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/add_table_to_workbook.html</loc>
+  </url>
+  <url>
     <loc>/reference/add_worksheet.html</loc>
+  </url>
+  <url>
+    <loc>/reference/annotate_clusters.html</loc>
   </url>
   <url>
     <loc>/reference/apply_r1.html</loc>
@@ -35,6 +41,12 @@
   </url>
   <url>
     <loc>/reference/brainstorm-package.html</loc>
+  </url>
+  <url>
+    <loc>/reference/cluster_jaccard.html</loc>
+  </url>
+  <url>
+    <loc>/reference/compute_jaccard_similarity.html</loc>
   </url>
   <url>
     <loc>/reference/h1.html</loc>

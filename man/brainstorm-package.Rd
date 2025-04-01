@@ -8,9 +8,17 @@
 \description{
 This package houses personal utility functions which I reuse in my R scripts.
 }
-\references{
-\url{https://www.ayushnoori.com/brainstorm}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://www.ayushnoori.com/brainstorm}
+  \item \url{https://github.com/ayushnoori/brainstorm}
+  \item Report bugs at \url{https://github.com/ayushnoori/brainstorm/issues}
+}
+
 }
 \author{
-Ayush Noori \email{anoori1@mgh.harvard.edu}
+\strong{Maintainer}: Ayush Noori \email{anoori1@mgh.harvard.edu} (\href{https://orcid.org/0000-0003-1420-1236}{ORCID})
+
 }
+\keyword{internal}
